@@ -45,6 +45,15 @@ function scale(v1, scalar)
   return v
 end
 
+function norm(v1)
+  _mag = mag(v1)
+  return vector2( v1.x / _mag, v1.y / _mag )
+end
+
+function mag(v1)
+  return sqrt(v1.x * v1.x + v1.y * v1.y)
+end
+
 function printv(v)
   print("x: "..tostring(v.x)..", y: "..tostring(v.y))
 end
